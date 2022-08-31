@@ -1,13 +1,11 @@
-import React from 'react'
-import '../index.css'
+import { useState } from "react";
 
-export default function Api(props) {
-    return (
-        <div>
-            <h2>Pare</h2>
-            <h2>atenção</h2>
-            <h2>siga</h2>
-            <div>{props.children[0]}</div>
-        </div>
+export default ()=> {
+    const [semafaro, setSemafaro] =useState("Pare");
+    return(
+        <>
+        <p className="cTeste">{semafaro}</p>
+        <button onClick={()=>setSemafaro('Atenção')}>Mudar</button>
+        </>
     )
 }
